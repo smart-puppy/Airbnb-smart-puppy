@@ -50,7 +50,10 @@ gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1f02a720e26cb2aea4931958c51c17e0dc2dad5f
 # added devise 
 gem "devise"
 #
@@ -58,8 +61,11 @@ gem "devise"
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 1f02a720e26cb2aea4931958c51c17e0dc2dad5f
 group :development, :test do
   gem "dotenv-rails"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
