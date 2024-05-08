@@ -7,7 +7,7 @@ class CreateBikes < ActiveRecord::Migration[7.1]
       t.boolean :electric
       t.integer :speed
       t.string :location
-      t.integer :user_id
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
