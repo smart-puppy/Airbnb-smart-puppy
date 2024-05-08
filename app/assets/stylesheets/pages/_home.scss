@@ -1,27 +1,32 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif; /* Added font-family to body */
+  font-family: Arial, sans-serif;
   background-color: #f8f8f8;
-  color: #333;
   line-height: 1.6;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+h1 {
+    color: white;
+   font-weight: bold;
+   font-size: 30px;
 }
+
+p {background-color: black;
+    color: white;
+    font-weight: bold;
+  font-size: 20px;
+}
+
 
 .header {
   height: 600px;
-  background-size: contain; /* Changed from cover to contain */
+  background-size: contain;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: black;
 }
 
 .hero {
@@ -30,19 +35,11 @@ html, body {
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 100%;
   margin: 0 auto;
+  margin-bottom: 5%
 }
 
-.hero h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.1em;
-  margin-bottom: 30px;
-}
 
 .rent-button {
   display: inline-block;
