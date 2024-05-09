@@ -50,11 +50,12 @@ gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 
-# added devise 
+# added devise
 gem "devise"
 #
 
-
+# Cloudinary setup
+gem "cloudinary"
 
 
 group :development, :test do

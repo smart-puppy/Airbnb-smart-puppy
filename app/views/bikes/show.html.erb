@@ -1,9 +1,22 @@
-
-
-<div class="element">
-<h1><%= @bike.colour %></h1>
+<div class="bikes-booking-container">
+<div class="card-container">
+    <div class="card-product">
+        <% if @bike.photo.attached? %>
+        <%= cl_image_tag @bike.photo.key, height: 300, width: 400, crop: :fill %>
+        <% else %>
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="Speedy Bike">
+        <% end %>
+        <div class="card-product-content">
+          <h2> <%= @bike.colour %></h2>
+          <p><%= @bike.description %></p>
+          <p><%= @bike.speed %></p>
+          <p><%= @bike.electric %></p>
+          <p><%= @bike.location %></p>
+          <p>$<%= @bike.price %></p>
+        </div>
+    </div>
+</div>
 <%= link_to "Go Back", bikes_path %>
-
 
 
 <h1>Booking</h1>
@@ -14,7 +27,3 @@
   <%= f.submit %>
 <% end %>
 </div>
-
-
-
-
