@@ -1,3 +1,6 @@
+// Import page-specific CSS files here.
+@import "home";
+
 .card-category {
   background-size: cover;
   background-position: center;
@@ -12,64 +15,51 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
-
 .card-container {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  width: 100%;
+  margin-top: 5%;
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f7f7f7;
 }
 
 .card-product {
   overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  position: relative;
   width: 300px;
   height: 400px;
-  overflow: hidden;
+  background: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-product:hover {
+  transform: translateY(-5px);
 }
 
 .card-product img {
-  height: 100%;
   width: 100%;
+  height: 200px;
   object-fit: cover;
-  transition: transform 0.5s;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-.card-product:hover img {
-  transform: scale(1.1);
+.card-product-content {
+  padding: 20px;
 }
 
-.card-product-infos {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 10px;
-  box-sizing: border-box;
-  transition: transform 0.5s;
-  transform: translateY(100%);
+.card-product h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.card-product:hover .card-product-infos {
-  transform: translateY(0);
+.card-product p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 0;
 }
-
-/* End of Global styles */
-
-/* Specific to Home page */
-.card-category {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg);
-}
-/* End of Specific styles */
