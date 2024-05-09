@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   # Home page route
   get '/home', to: 'pages#home', as: :home
-  get '/index', to: 'pages#index', as: :index
+  get '/bikes', to: 'pages#bikes', as: :bikes
 
   # Bikes resource with nested bookings
   resources :bikes do

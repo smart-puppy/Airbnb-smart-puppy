@@ -1,11 +1,11 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :index]
+  skip_before_action :authenticate_user!, only: [:home, :bikes]
 
   def home
   end
 
-  def index
+  def bikes
     @bikes = Bike.all
-    render 'bikes/index'
+    render 'bikes/bikes'
   end
 end
