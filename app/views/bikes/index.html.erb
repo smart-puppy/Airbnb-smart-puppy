@@ -1,2 +1,113 @@
-<h1>Hello bikes</h1>
-<h2>This is the bikes index page</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle Chums</title>
+    <style>
+        /* Global styles */
+        .card-category {
+            background-size: cover;
+            background-position: center;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .card-product {
+            overflow: hidden;
+            width: 300px;
+            height: 400px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card-product:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-product-content {
+            padding: 20px;
+        }
+
+        .card-product h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-product p {
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(index-header.jpg)">
+  Choose your Pedal Chum - Your Go-To for Two-Wheeled Adventures!
+</div>
+
+<div class="card-container">
+    <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="Speedy Bike">
+        <div class="card-product-content">
+            <h2>Speedy Bike</h2>
+            <p>Product description with <strong>relevant info</strong> only.</p>
+        </div>
+    </div>
+
+    <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="Comfy Comfy Bike">
+        <div class="card-product-content">
+            <h2>Comfy Comfy Bike</h2>
+            <p>Product description with <strong>relevant info</strong> only.</p>
+        </div>
+    </div>
+
+    <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="Big Bike">
+        <div class="card-product-content">
+            <h2>Big Bike</h2>
+            <p>Product description with <strong>relevant info</strong> only.</p>
+        </div>
+    </div>
+
+    <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="Speedy Bike">
+        <div class="card-product-content">
+            <h2>Speedy Bike</h2>
+            <p>Product description with <strong>relevant info</strong> only.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
