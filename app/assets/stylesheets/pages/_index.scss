@@ -2,6 +2,12 @@
 @import "home";
 @import "bike_and_booking";
 
+.element {
+  max-width: fit-content;
+  margin-inline: auto;
+}
+
+
 .card-category {
   background-size: cover;
   background-position: center;
@@ -12,10 +18,11 @@
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
+
 .card-container {
   margin-top: 5%;
   display: flex;

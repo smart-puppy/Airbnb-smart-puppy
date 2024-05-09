@@ -1,50 +1,37 @@
-
-@import 'bootstrap'; // Import Bootstrap if needed
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+body, html {
+  height: 100%;
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
-h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333;
-  text-align: center;
-}
-
-h2 {
-  font-size: 20px;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  color: #555;
+.booking-title {
   text-align: center;
 }
 
 .card-container {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  overflow: auto;
+  margin-top: 20px;
 }
 
 .card {
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  margin: 10px;
   padding: 15px;
   min-width: 300px;
+  flex: 1 1 300px;
 }
 
 .card-body {
