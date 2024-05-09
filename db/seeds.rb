@@ -1,11 +1,18 @@
 
+# before running this file, make sure to run the following command in the terminal:
+# rails db:drop db:create db:migrate db:seed
+
+
+
+# This file should contain all the record creation needed to seed the database with its default values.
+puts "Cleaning up database..."
 
 User.destroy_all
 Bike.destroy_all
 
+puts "Database cleaned"
 
 user = User.create(email:"test@test.com", password:123456)
-
 
 bike1 = Bike.new(price: 20, description: "amazing", colour: "black", speed: 5, user: user)
 bike1.save
