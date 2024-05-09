@@ -7,8 +7,9 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 puts "Cleaning up database..."
 
-User.destroy_all
+Booking.destroy_all
 Bike.destroy_all
+User.destroy_all
 
 puts "Database cleaned"
 
@@ -17,11 +18,41 @@ user = User.create(email:"test@test.com", password:123456)
 bike1 = Bike.new(price: 20, description: "amazing", colour: "black", speed: 5, user: user)
 bike1.save
 
-bike1 = Bike.new(price: 35, description: "amazing", colour: "green", speed: 3, user: user)
-bike1.save
+bike2 = Bike.new(price: 35, description: "amazing", colour: "green", speed: 3, user: user)
+bike2.save
 
-bike1 = Bike.new(price: 6, description: "cheap", colour: "pink", speed: 2, user: user)
-bike1.save
+bike3 = Bike.new(price: 6, description: "cheap", colour: "pink", speed: 2, user: user)
+bike3.save
 
-bike1 = Bike.new(price: 255, description: "expensive", colour: "yellow", speed: 1, user: user)
-bike1.save
+bike4 = Bike.new(price: 255, description: "expensive", colour: "yellow", speed: 1, user: user)
+bike4.save
+
+bike5 = Bike.new(price: 10, description: "cheap", colour: "pink", speed: 2, user: user)
+bike5.save
+
+bike6 = Bike.new(price: 55, description: "expensive", colour: "yellow", speed: 1, user: user)
+bike6.save
+
+bike7 = Bike.new(price: 6, description: "cheap", colour: "pink", speed: 2, user: user)
+bike7.save
+
+bike8 = Bike.new(price: 255, description: "expensive", colour: "yellow", speed: 1, user: user)
+bike8.save
+
+bike9 = Bike.new(price: 6, description: "cheap", colour: "pink", speed: 2, user: user)
+bike9.save
+
+bike10 = Bike.new(price: 255, description: "expensive", colour: "yellow", speed: 1, user: user)
+bike10.save
+
+bike11 = Bike.new(price: 6, description: "cheap", colour: "pink", speed: 2, user: user)
+bike11.save
+
+bike12 = Bike.new(price: 255, description: "expensive", colour: "yellow", speed: 1, user: user)
+bike12.save
+
+bike13 = Bike.new(price: 6, description: "cheap", colour: "pink", speed: 2, user: user)
+bike13.save
+
+bike14 = Bike.new(price: 255, description: "expensive", colour: "yellow", speed: 1, user: user)
+bike14.save
