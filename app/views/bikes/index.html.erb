@@ -1,0 +1,18 @@
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  Choose your Pedal Chum - Your Go-To for Two-Wheeled Adventures!
+</div>
+
+<div class="card-container">
+  <% @bikes.each do |bike| %>
+    <div class="card-product">
+      <%= link_to  bike_path(bike) do %>
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="Speedy Bike">
+        <div class="card-product-content">
+          <h2> <%= bike.colour %></h2>
+          <p><%= bike.description %></p>
+          <p>$<%= bike.price %></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
