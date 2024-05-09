@@ -5,8 +5,12 @@
 <div class="card-container">
   <% @bikes.each do |bike| %>
     <div class="card-product">
-      <%= link_to  bike_path(bike) do %>
+      <%= link_to bike_path(bike) do %>
+      <% if bike.photo.attached? %>
+        <%= cl_image_tag bike.photo.key, height: 300, width: 400, crop: :fill %>
+        <% else %>
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="Speedy Bike">
+        <% end %>
         <div class="card-product-content">
           <h2> <%= bike.colour %></h2>
           <p><%= bike.description %></p>
