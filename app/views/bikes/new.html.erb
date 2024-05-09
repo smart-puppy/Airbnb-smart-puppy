@@ -1,8 +1,11 @@
 <h1>Add your own bike</h1>
 
 <%= simple_form_for(@bike) do |f| %>
-  <%= f.input :colour %>
-  <%= f.input :speed %>
+  <%= f.input :price %>
   <%= f.input :description %>
+  <%= f.input :colour %>
+  <%= f.input :electric %>
+  <%= f.input :speed %>
+  <%= f.input :location %>
   <%= f.submit %>
 <% end %>
