@@ -1,0 +1,12 @@
+<h1><%= @bike.colour %></h1>
+<%= link_to "Go Back", bikes_path %>
+
+
+
+<h1>Booking</h1>
+
+<%= simple_form_for([@bike, @booking]) do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit %>
+<% end %>
