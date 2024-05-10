@@ -1,9 +1,42 @@
 class BikesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @bikes = Bike.all
   end
+
   def show
     @bike = Bike.find(params[:id])
+    @booking = Booking.new
+  end
+
+  def new
+    @bike = Bike.new
+  end
+
+  def create
+    @bike = Bike.new(bike_params)
+    @bike.user = current_user
+    if @bike.save
+      redirect_to bike_path(@bike)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  def edit
+  end
+
+  def update
+
+  end
+
+  def delete
+  end
+
+  private
+
+  def bike_params
+    params.require(:bike).permit(:price, :description, :colour, :electric, :speed, :location, :photo)
   end
 end

@@ -51,21 +51,22 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 1f02a720e26cb2aea4931958c51c17e0dc2dad5f
 # added devise 
+=======
+# added devise
+>>>>>>> 8f7c6519c7002aa65a6230b26153a21362223664
 gem "devise"
 #
 
+# Cloudinary setup
+gem "cloudinary"
 
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 1f02a720e26cb2aea4931958c51c17e0dc2dad5f
 group :development, :test do
   gem "dotenv-rails"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

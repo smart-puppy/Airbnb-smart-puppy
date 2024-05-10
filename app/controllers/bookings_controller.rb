@@ -8,15 +8,16 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @bike = Bike.find(params[:bike_id])
+    @booking.bike = @bike
     @booking.user = current_user
 
     if @booking.save
-      redirect_to @booking, notice: 'Booking was successfully created'
+      redirect_to bikes_path, notice: 'Booking was successfully created'
     else
-      render :new
+      render :show, status: :unprocessable_entity
     end
   end
-
 
 
   private
@@ -27,6 +28,6 @@ class BookingsController < ApplicationController
 
 
     def booking_params
-      params.require(:booking).permit(:start_date, :end_date, :bike_id) # Add any other parameters you have for a booking
+      params.require(:booking).permit(:start_date, :end_date)
     end
 end

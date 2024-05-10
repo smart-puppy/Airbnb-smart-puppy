@@ -1,0 +1,8 @@
+<h1>Update your bike</h1>
+
+<%= simple_form_for(@bike) do |f| %>
+  <%= f.input :colour %>
+  <%= f.input :speed %>
+  <%= f.input :description %>
+  <%= f.submit %>
+<% end %>
