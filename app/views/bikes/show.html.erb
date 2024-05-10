@@ -1,12 +1,39 @@
-<h1><%= @bike.colour %></h1>
+<div class="element"> 
+<div class="bikes-booking-container">
+<div class="card-container">
+    <div class="card-product">
+        <% if @bike.photo.attached? %>
+        <%= cl_image_tag @bike.photo.key, height: 300, width: 400, crop: :fill %>
+        <% else %>
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="Speedy Bike">
+        <% end %>
+        <div class="card-product-content">
+          <h2> <%= @bike.colour %></h2>
+
+          <p> Description: <%= @bike.description %></p>
+          <p> Speed: <%= @bike.speed %></p>
+          <p> Type: <%= @bike.electric %></p>
+          <p> Location: <%= @bike.location %></p>
+          <p>Price: £<%= @bike.price %></p>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="">
+
+
 <%= link_to "Go Back", bikes_path %>
-
-
-
 <h1>Booking</h1>
 
 <%= simple_form_for([@bike, @booking]) do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
   <%= f.submit %>
+  <a class="btn btn-flat" href="#">delete</a> 
 <% end %>
+</div>
+</div>
+</div>
+
