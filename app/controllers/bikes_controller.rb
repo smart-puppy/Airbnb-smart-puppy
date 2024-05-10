@@ -27,12 +27,14 @@ class BikesController < ApplicationController
   def edit
   end
 
-  def update
-
+  def destroy
+    @bike = Bike.find(params[:id])
+    @bike.destroy
+    redirect_to bikes_url, notice: 'Bike was successfully destroyed.'
   end
 
-  def delete
-  end
+
+
 
   private
 
