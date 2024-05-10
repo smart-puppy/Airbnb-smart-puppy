@@ -112,8 +112,13 @@ margin-left: 5%;
 
 
 .go-back {
-  border-width: 2px;
-  margin-top: 17%;
-  background: #F0F0F0;
-  color: #000; /* Black text color */
+  margin-top: 8%;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d2dbe5; /* Button color */
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Show pointer cursor on hover */
 }
