@@ -15,7 +15,7 @@
           <h2> <%= bike.colour %></h2>
           <p><%= bike.description %></p>
           <p><%= bike.speed %></p>
-          <p><%= bike.electric %></p>
+          <p><%= bike.electric ? "Electric" : "Pedal Bike" %></p>
           <p><%= bike.location %></p>
           <p>$<%= bike.price %></p>
         </div>
