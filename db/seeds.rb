@@ -19,6 +19,7 @@ puts "Database cleaned"
 
 user = User.create(email:"test@test.com", password:123456)
 user = User.create(email:"lewis@gmail.com", password:123456)
+user = User.create(email:"robbie@gmail.com", password:123456)
 
 
 
@@ -43,15 +44,11 @@ bike6.photo.attach(io: URI.open("https://www.tgc.bike/images/dawes-combi-p80-68_
 bike6.save
 
 
-
-
-
-
 bike1 = Bike.new(price: 20, description: "Conquer any trail with the Summit 5000, the ultimate off-road companion for adventurous rider.", colour: "the Summit 5000 Mountain Bike", speed: 5, user: user)
 bike1.photo.attach(io: URI.open("https://i.stack.imgur.com/BOSno.jpg"), filename: "nes.png", content_type: "image/png")
 bike1.save
 
-bike2 = Bike.new(price: 35, description: "Navigate the urban jungle with style and ease on the CitySprint commuter bike.", colour: "CitySprint Commuter Bike", speed: 3, user: user)
+bike2 = Bike.new(price: 35,  description: "Navigate the urban jungle with style and ease on the CitySprint commuter bike.", colour: "CitySprint Commuter Bike", speed: 3, user: user)
 bike2.photo.attach(io: URI.open("https://i.ebayimg.com/images/g/Os4AAOSwPzhlEMoF/s-l1600.jpg"), filename: "nes.png", content_type: "image/png")
 bike2.save
 
