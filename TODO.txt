@@ -1,0 +1,7 @@
+
+
+1. work on controllers
+2. make the views
+
+3. connect the controllers to the views
+4. TEST!!!!
