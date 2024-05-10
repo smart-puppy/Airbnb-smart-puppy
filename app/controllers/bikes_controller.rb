@@ -18,11 +18,12 @@ class BikesController < ApplicationController
     @bike = Bike.new(bike_params)
     @bike.user = current_user
     if @bike.save
-      redirect_to bike_path(@bike)
+      redirect_to bikes_path
     else
       render :new, status: :unprocessable_entity
     end
   end
+
 
   def edit
   end
@@ -32,6 +33,7 @@ class BikesController < ApplicationController
     @bike.destroy
     redirect_to bikes_url, notice: 'Bike was successfully destroyed.'
   end
+
 
 
 

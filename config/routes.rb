@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   end
 
   get 'dashboard', to: 'pages#dashboard', as: :dashboard
+  get '/mybikes', to: 'pages#mybikes'
+
+
 
   # Root route
   root 'pages#home'

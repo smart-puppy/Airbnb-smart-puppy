@@ -2,11 +2,6 @@
   Choose your Pedal Chum - Your Go-To for Two-Wheeled Adventures!
 </div>
 
-<div class="card-description">
-  <p>Whether you're cruising through the city streets, exploring scenic trails, or simply commuting to work, we have the ideal bike for you.<br>
-  With flexible rental durations and competitive pricing, renting a bike has never been easier.<br>
-  Start your journey today by exploring our selection of bikes.</p>
-</div>
 <div class="card-container">
   <% @bikes.each do |bike| %>
     <div class="card-product">
@@ -14,12 +9,12 @@
         <%= image_tag "https://thumbs.dreamstime.com/z/bmx-bike-white-very-elaborated-33336732.jpg?ct=jpeg", alt: "Speedy Bike" %>
 
         <div class="card-product-content">
-
-          <h2> <%= bike.colour %></h2>
-          <p> Description: <%= bike.description %></p>
-          <p> Speed: <%= bike.speed %></p>
-          <p> Type: <%= bike.electric ? "Electric" : "Pedal Bike" %></p>
-          <p> Price: £<%= bike.price %></p>
+          <h2><%= bike.colour %></h2>
+          <p><%= bike.description %></p>
+          <p><%= bike.speed %></p>
+          <p><%= bike.electric %></p>
+          <p><%= bike.location %></p>
+          <p>$<%= bike.price %></p>
         </div>
       <% end %>
 
