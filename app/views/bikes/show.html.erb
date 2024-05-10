@@ -9,14 +9,10 @@
         <% end %>
         <div class="card-product-content">
           <h2> <%= @bike.colour %></h2>
-
           <p> Description: <%= @bike.description %></p>
           <p> Speed: <%= @bike.speed %></p>
           <p> Type: <%= @bike.electric %></p>
-          <p> Location: <%= @bike.location %></p>
           <p>Price: £<%= @bike.price %></p>
-
-
         </div>
     </div>
 </div>
@@ -31,7 +27,6 @@
   <%= f.input :start_date %>
   <%= f.input :end_date %>
   <%= f.submit %>
-  <a class="btn btn-flat" href="#">delete</a> 
 <% end %>
 </div>
 </div>
