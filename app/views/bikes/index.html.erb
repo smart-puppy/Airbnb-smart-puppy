@@ -1,4 +1,4 @@
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://thumbs.dreamstime.com/z/bike-line-banner-bicycle-road-tour-background-cyclist-journey-travel-illustration-mountain-active-transport-lifestyle-sport-bike-256635548.jpg?ct=jpeg)">
   Choose your Pedal Chum - Your Go-To for Two-Wheeled Adventures!
 </div>
 
@@ -6,8 +6,9 @@
   <% @bikes.each do |bike| %>
     <div class="card-product">
       <%= link_to  bike_path(bike) do %>
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="Speedy Bike">
-        <div class="card-product-content">
+<%= image_tag "https://thumbs.dreamstime.com/z/bmx-bike-white-very-elaborated-33336732.jpg?ct=jpeg", alt: "Speedy Bike" %>
+
+<div class="card-product-content">
           <h2> <%= bike.colour %></h2>
           <p><%= bike.description %></p>
           <p><%= bike.speed %></p>
