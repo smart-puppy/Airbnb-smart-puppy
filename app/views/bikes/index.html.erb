@@ -2,6 +2,11 @@
   Choose your Pedal Chum - Your Go-To for Two-Wheeled Adventures!
 </div>
 
+<div class="card-description">
+  <p>Whether you're cruising through the city streets, exploring scenic trails, or simply commuting to work, we have the ideal bike for you.<br>
+  With flexible rental durations and competitive pricing, renting a bike has never been easier.<br>
+  Start your journey today by exploring our selection of bikes.</p>
+</div>
 <div class="card-container">
   <% @bikes.each do |bike| %>
     <div class="card-product">
@@ -13,11 +18,11 @@
         <% end %>
         <div class="card-product-content">
           <h2> <%= bike.colour %></h2>
-          <p><%= bike.description %></p>
-          <p><%= bike.speed %></p>
-          <p><%= bike.electric %></p>
-          <p><%= bike.location %></p>
-          <p>$<%= bike.price %></p>
+          <p> Description: <%= bike.description %></p>
+          <p> Speed: <%= bike.speed %></p>
+          <p> Type: <%= bike.electric ? "Electric" : "Pedal Bike" %></p>
+          <p> Location: <%= bike.location %></p>
+          <p> Price: £<%= bike.price %></p>
         </div>
       <% end %>
     </div>
