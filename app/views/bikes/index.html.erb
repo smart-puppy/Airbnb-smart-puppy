@@ -1,4 +1,4 @@
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://thumbs.dreamstime.com/z/bike-line-banner-bicycle-road-tour-background-cyclist-journey-travel-illustration-mountain-active-transport-lifestyle-sport-bike-256635548.jpg?w=992)">
   Choose your Pedal Chum - Your Go-To for Two-Wheeled Adventures!
 </div>
 
@@ -14,11 +14,12 @@
       <% if bike.photo.attached? %>
         <%= cl_image_tag bike.photo.key, height: 300, width: 400, crop: :fill %>
         <% else %>
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="Speedy Bike">
+<img src="https://thumbs.dreamstime.com/z/bike-line-banner-bicycle-road-tour-background-cyclist-journey-travel-illustration-mountain-active-transport-lifestyle-sport-bike-256635548.jpg?w=992" alt="Speedy Bike">
+        <!-- Updated image URL -->
         <% end %>
         <div class="card-product-content">
           <h2> <%= bike.colour %></h2>
-          <p> Description: <%= bike.description %></p>
+          <p> Description: <%= truncate(bike.description, length: 50) %></p>
           <p> Speed: <%= bike.speed %></p>
           <p> Type: <%= bike.electric ? "Electric" : "Pedal Bike" %></p>
           <p> Price: £<%= bike.price %></p>
