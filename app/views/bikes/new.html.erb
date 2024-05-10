@@ -1,11 +1,12 @@
 <h1>Add your own bike</h1>
 
-<%= simple_form_for(@bike) do |f| %>
+<%= simple_form_for(@bike, url: bikes_path) do |f| %>
   <%= f.input :price %>
   <%= f.input :description %>
   <%= f.input :colour %>
   <%= f.input :electric %>
   <%= f.input :speed %>
   <%= f.input :location %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
