@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag 'application', 'pages/_dashboard', media: 'all' %>
+
+<div class="container">
+  <% if current_user.bookings.present? %>
+    <h1 class="booking-title">My Bookings</h1>
+    <div class="card-container">
+      <% current_user.bookings.each do |booking| %>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= booking.bike.description %></h5>
+            <p class="card-text"><strong>Start Date:</strong> <%= booking.start_date %></p>
+            <p class="card-text"><strong>End Date:</strong> <%= booking.end_date %></p>
+            <p class="card-text"><strong>Status:</strong> <%= booking.bike.user == current_user ? 'Confirmed' : 'Pending Confirmation' %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <p class="no-bookings">No bookings found.</p>
+  <% end %>
+</div>

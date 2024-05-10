@@ -1,12 +1,19 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "pages#home"
-  
-  
+
+  # Health check route
+  get '/up', to: 'rails/health#show', as: :rails_health_check
+
+  # Bikes resource with nested bookings
   resources :bikes do
     resources :bookings, only: [:new, :create]
   end
 
-  get "up" => "rails/health#show", as: :rails_health_check
+  get 'dashboard', to: 'pages#dashboard', as: :dashboard
+  get '/mybikes', to: 'pages#mybikes'
 
+
+
+  # Root route
+  root 'pages#home'
 end

@@ -6,51 +6,45 @@ html, body {
   line-height: 1.6;
 }
 
-h1 {
-    color: white;
-   font-weight: bold;
-   font-size: 30px;
+.container {
+  max-width: 1200px; /* Adjust max-width as needed */
+  margin: 0 auto; /* Center container */
 }
 
-p {background-color: black;
-    color: white;
-    font-weight: bold;
-  font-size: 20px;
-}
-
-
-.header {
+.banner {
+  background-size: cover;
   height: 600px;
-  background-size: contain;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  padding: 150px 0;
 }
 
-.hero {
-  padding: 50px 0;
-  text-align: center;
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center; /* Center text */
 }
 
-.hero-content {
-  max-width: 100%;
-  margin: 0 auto;
-  margin-bottom: 5%
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-align: center; /* Center text */
 }
 
-
-.rent-button {
+.btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #dc9d0a;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
-.rent-button:hover {
-  background-color: #0056b3;
+.btn:hover {
+  background-color: #525d68;
 }

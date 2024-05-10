@@ -50,10 +50,12 @@ gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 
-# added devise 
+# Use Devise for user authentication [
 gem "devise"
 #
 
+# Cloudinary setup
+gem "cloudinary"
 
 
 
